@@ -32,7 +32,7 @@ void WebSocket::begin() {
 
 void WebSocket::listen() {
     
-    if (server.available()) {
+    if (client = server.available()) {
         // No active connection available. Treat this as a handshake request.
         if (state == DISCONNECTED) {
             bool handshakeSuccessful = processHandshake();
